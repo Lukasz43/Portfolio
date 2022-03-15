@@ -1,82 +1,104 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html {
   font-size: 62.5%;
-}
+  scroll-behavior: smooth; }
 
 body {
   font-family: "Roboto Mono", monospace;
   position: relative;
+  box-sizing: border-box;
   background-color: #f1f2f6;
-  text-align: center;
-  user-select: none;
-}
+  user-select: none; }
 
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
-main {
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, 50%);
-}
+button {
+  outline: none;
+  border: none; }
 
-h1 {
+.header {
+  position: relative;
+  height: 100vh;
+  text-align: center; }
+
+.scrollTop-div {
+  position: absolute; }
+
+.scrollTop {
+  position: fixed;
+  top: 2vh;
+  padding: 2rem 3rem 2rem 3rem;
+  background-color: #2f3542;
+  color: #f1f2f6;
   font-size: 3rem;
-  color: #3d3d3d;
-  white-space: nowrap;
-}
+  cursor: pointer; }
+
+.header-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .header-main h1 {
+    color: #2f3542;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    white-space: none; }
 
 .button-main {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 50%);
-  min-width: 14vw;
-  min-height: 8vh;
-  background-color: #3d3d3d;
-  color: #f1f2f6;
   font-size: 2rem;
-  padding: 2rem;
-}
+  background-color: #2f3542;
+  color: #f1f2f6;
+  padding: 2rem 4rem 2rem 4rem;
+  user-select: none; }
+  .button-main:hover {
+    cursor: pointer; }
 
-.become-red {
-  background-color: #ff4757;
-}
-
-.back-to-white {
+.stripe-main {
+  width: 100%;
+  height: 2vh;
+  z-index: 2;
   background-color: #f1f2f6;
-}
+  text-align: center;
+  position: relative; }
 
-.add-animation-toArrowDown {
-  animation: toArrowDown 2s ease-in 10;
-}
+.stripes-set div {
+  height: 100%;
+  width: 3rem;
+  color: #f1f2f6;
+  text-align: center; }
 
-@keyframes toArrowDown {
-  0% {
-    width: 10vw;
-    background-color: brown;
-  }
+.stripes-set {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%); }
 
-  100% {
-    width: 100vw;
-  }
-}
+.stripe1 {
+  background-color: #1e90ff;
+  float: left; }
 
-@keyframes dissapear {
-  0% {
-    opacity: 100%;
-  }
+.stripe2 {
+  background-color: #ffef64;
+  float: left; }
 
-  100% {
-    opacity: 50%;
-  }
-}
+.stripe3 {
+  background-color: #ff4757;
+  float: left; }
+
+.stripe4 {
+  background-color: #2ed573;
+  float: left; }
+
+.main {
+  height: 100vh;
+  background-color: #2f3542; }
+
+@media only screen and (max-width: 600px) {
+  .scrollTop-div {
+    display: none; } }
